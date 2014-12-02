@@ -15,11 +15,11 @@ public class Operators {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        integerTest();
-        mathTest();
-        incrementAndModulus();
-        compoundAssignmentTest();
-        toggleValue();
+//        integerTest();
+//        mathTest();
+//        incrementAndModulus();
+//        compoundAssignmentTest();
+//        toggleValue();
         toggleValueTest();
     }
 
@@ -103,22 +103,25 @@ public class Operators {
      }
 
        public static boolean toggleValue (boolean myValue){
-         
-           return myValue;
+           return !myValue;
      }
      
        public static void toggleValueTest (){
           boolean bValue = false;
+          
            System.out.println("bValue = " + bValue);
      
          
           //call the toggleValue method using "bValue" as the parameter, and assign the result back into "bValue" 
- 
           //print out the value of "bValue" (note: this should now be "true")
+           bValue = toggleValue(bValue);
+           System.out.println("bValue = " + bValue);
 
           //again call the toggleValue method using "bValue" as the parameter, and assign the result back into "bValue" 
  
           //print out the value of "bValue" (note: this should now be "false")
+           bValue = toggleValue(bValue);
+           System.out.println("bValue = " + bValue);
  
  
      }
